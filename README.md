@@ -1,7 +1,7 @@
 ## Hello there 👋, I'm @adri1197!
 <!-- <a href="https://adri1197.github.io"><img alt="Website" src="https://img.shields.io/badge/Website-adri1197.github.io -navy?style=for-the-badge&logo=firefox&logoColor=white"></a> -->
-[![Gmail Badge](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=black&link=mailto:adri1197@gmail.com)](mailto:adri1197@gmail.com)
-[![Linkedin Badge](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=black&link=https://www.linkedin.com/in/adrian-fdez-de-la-torre)](https://www.linkedin.com/in/adrian-fdez-de-la-torre)
+[![Gmail Badge](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white&link=mailto:adri1197@gmail.com)](mailto:adri1197@gmail.com)
+[![Linkedin Badge](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white&link=https://www.linkedin.com/in/adrian-fdez-de-la-torre)](https://www.linkedin.com/in/adrian-fdez-de-la-torre)
 
 Hey! I’m Adrián, a software engineer from <b>Madrid, Spain</b> <img src="https://cdn-icons-png.flaticon.com/512/197/197593.png" width="13"/> with a passion for building cool things and giving back to Open Source. 
 
