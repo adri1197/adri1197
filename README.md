@@ -3,9 +3,9 @@
 [![Gmail Badge](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white&link=mailto:adri1197@gmail.com)](mailto:adri1197@gmail.com)
 [![Linkedin Badge](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white&link=https://www.linkedin.com/in/adrian-fdez-de-la-torre)](https://www.linkedin.com/in/adrian-fdez-de-la-torre)
 
-Hey! I’m Adrián, a software engineer from <b>Madrid, Spain</b> <img src="https://cdn-icons-png.flaticon.com/512/197/197593.png" width="13"/> with a passion for building cool things and giving back to Open Source. 
+Hey! I'm Adrián, a Platform Architect from <b>Madrid, Spain</b> <img src="https://cdn-icons-png.flaticon.com/512/197/197593.png" width="13"/> with a passion for designing scalable systems and contributing to the cloud-native ecosystem. 
 
-By day, I’m a DevOps Engineer at Ericsson, living at the crossroads of R&D and Service Delivery—making sure cloud native apps go from idea to reality, smoothly and reliably. Always up for new challenges and side projects!
+By day, I architect and build robust platforms at Ericsson, bridging the gap between innovation and production—ensuring cloud-native solutions scale seamlessly from concept to real deployments. I'm particularly passionate about contributing to CNCF projects and the broader Open Source community, believing that collaborative development drives the future of technology. Always eager to tackle complex architectural challenges and contribute to meaningful Open Source initiatives!
 
 <!-- Interests -->
 
