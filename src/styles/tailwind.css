@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+[data-theme='dark'],
+:root {
+  --color-theme: #0c1a2e;
+
+  --color-primary-1: oklch(from var(--color-theme) calc(l + 0.3) c h);
+  --color-primary-2: oklch(from var(--color-theme) calc(l + 0.4) c h);
+  --color-primary-3: oklch(from var(--color-theme) calc(l + 0.5) c h);
+}
+
+:root {
+  --color-highlight-1: oklch(from var(--color-theme) calc(l + 0.05) c h);
+  --color-highlight-2: oklch(from var(--color-theme) calc(l + 0.1) c h);
+  --color-highlight-3: oklch(from var(--color-theme) calc(l + 0.15) c h);
+
+  scrollbar-color: var(--color-primary-1) transparent;
+}
+
+::selection {
+  color: var(--color-primary-3);
+  background-color: var(--color-highlight-3);
+}
+
+* {
+  overflow-wrap: break-word;
+}
