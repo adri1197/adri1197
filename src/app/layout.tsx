@@ -36,6 +36,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => (
     >
       <SocialLinks />
       {children}
+      <footer className="mx-auto flex w-full max-w-6xl justify-center border-t border-primary-1/50 px-4 pb-8 pt-6 text-center text-xs text-primary-3 sm:px-8 lg:px-12">
+        <p>© {new Date().getFullYear()} Adrián Fernández de la Torre</p>
+      </footer>
       <Analytics />
     </body>
   </html>

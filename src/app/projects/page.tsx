@@ -104,7 +104,7 @@ const Page = () => (
     </div>
 
     <div className="mx-auto flex w-full max-w-screen-sm flex-col gap-8">
-      <Text as="h2">Open Source</Text>
+      <Text as="h2">Open-Source</Text>
       <div className="flex flex-col gap-6">
         {openSource.map((p) => (
           <ProjectCard key={p.title} {...p} />

@@ -38,6 +38,21 @@ const WebIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
   </svg>
 )
 
+const LocationIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth={1.75}
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    {...props}
+  >
+    <path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z" />
+    <circle cx="12" cy="10" r="2.5" />
+  </svg>
+)
+
 const ProjectCard: React.FC<Project> = ({
   title,
   description,
@@ -47,16 +62,46 @@ const ProjectCard: React.FC<Project> = ({
   contentHtml,
 }) => (
   <article className="rounded-3xl border border-primary-1 bg-highlight-1 p-5 shadow-lg shadow-black/10 transition duration-200 hover:-translate-y-1 hover:border-highlight-2 sm:p-6">
-    <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
-      <div className="flex-1">
-        <Text as="h3" size="xl" className="mb-3">
-          {title}
-        </Text>
-        <Text as="p" className="text-primary-2">
-          {description}
-        </Text>
+    <div>
+      <Text as="h3" size="xl" className="mb-3">
+        {title}
+      </Text>
+      <Text as="p" className="text-primary-2">
+        {description}
+      </Text>
+    </div>
+
+    <div
+      className="mt-6 space-y-4 text-sm leading-relaxed text-primary-2"
+      dangerouslySetInnerHTML={{ __html: contentHtml }}
+    />
+
+    <div className="mt-6 flex flex-wrap items-center justify-between gap-3">
+      <div className="flex items-center gap-3">
+        {github && (
+          <a
+            href={github}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="GitHub"
+            className="inline-flex h-12 w-12 items-center justify-center rounded-3xl bg-theme text-primary-1 transition duration-200 hover:bg-highlight-2"
+          >
+            <GitHubIcon className="size-6 stroke-primary-2" />
+          </a>
+        )}
+        {website && (
+          <a
+            href={website}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Website"
+            className="inline-flex h-12 w-12 items-center justify-center rounded-3xl bg-theme text-primary-1 transition duration-200 hover:bg-highlight-2"
+          >
+            <WebIcon className="size-6 stroke-primary-2" />
+          </a>
+        )}
       </div>
-      <div className="flex flex-wrap gap-2 text-[0.7rem] sm:text-sm">
+      <div className="ml-auto flex flex-wrap justify-end gap-2 text-[0.7rem] sm:text-sm">
         {tags?.map((tag) => (
           <span
             key={tag}
@@ -66,36 +111,6 @@ const ProjectCard: React.FC<Project> = ({
           </span>
         ))}
       </div>
-    </div>
-
-    <div
-      className="mt-6 space-y-4 text-sm leading-relaxed text-primary-2"
-      dangerouslySetInnerHTML={{ __html: contentHtml }}
-    />
-
-    <div className="mt-6 flex items-center gap-3">
-      {github && (
-        <a
-          href={github}
-          target="_blank"
-          rel="noreferrer"
-          aria-label="GitHub"
-          className="inline-flex h-12 w-12 items-center justify-center rounded-3xl bg-theme text-primary-1 transition duration-200 hover:bg-highlight-2"
-        >
-          <GitHubIcon className="size-6 stroke-primary-2" />
-        </a>
-      )}
-      {website && (
-        <a
-          href={website}
-          target="_blank"
-          rel="noreferrer"
-          aria-label="Website"
-          className="inline-flex h-12 w-12 items-center justify-center rounded-3xl bg-theme text-primary-1 transition duration-200 hover:bg-highlight-2"
-        >
-          <WebIcon className="size-6 stroke-primary-2" />
-        </a>
-      )}
     </div>
   </article>
 )
@@ -108,23 +123,31 @@ const ExperienceCard: React.FC<Experience> = ({
   contentHtml,
 }) => (
   <article className="rounded-3xl border border-primary-1 bg-highlight-1 p-5 shadow-lg shadow-black/10 transition duration-200 hover:-translate-y-1 hover:border-highlight-2 sm:p-6">
-    <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+    <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
       <div>
         <Text as="h3" size="xl">
           {role}
         </Text>
-        <Text size="sm" color={3} className="mt-1 block">
-          {company} · {period}
-        </Text>
+        <div className="mt-2 flex flex-wrap items-center gap-2">
+          <Text size="sm" color={3}>
+            {company}
+          </Text>
+          <span className="inline-flex items-center rounded-full border border-primary-1 bg-highlight-2 px-3 py-1 font-mono text-xs font-medium tracking-wide text-primary-3">
+            {period}
+          </span>
+        </div>
       </div>
       {location && (
-        <Text
-          size="sm"
-          color={3}
-          className="rounded-full border border-primary-1 px-3 py-1"
-        >
-          {location}
-        </Text>
+        <div className="inline-flex items-center gap-2 sm:pt-1">
+          <LocationIcon className="size-4 shrink-0 text-primary-3" />
+          <Text
+            size="sm"
+            color={3}
+            className="font-semibold"
+          >
+            {location}
+          </Text>
+        </div>
       )}
     </div>
 
@@ -161,9 +184,11 @@ const Page = async () => {
           </Text>
 
           <Text as="p" className="w-full text-base leading-relaxed text-primary-2 sm:text-lg lg:text-xl">
-            Platform Architect. Open Source Contributor. Cloud-native systems design with a focus on secure, scalable developer platforms.
+            Platform Architect. Open Source Contributor. Cloud-native systems design with a focus on secure, scalable developer platforms. 
           </Text>
-
+          <Text as="p" className="w-full text-base leading-relaxed text-primary-2 sm:text-lg lg:text-xl">
+            Don't believe in AI hype (it's a just powerful tool as any other), compilers were once considered magic too.
+          </Text>
           <div className="mx-auto flex w-full max-w-2xl flex-col gap-4 self-stretch sm:flex-row sm:gap-6 lg:max-w-screen-md lg:gap-8">
             <a
               href="#projects"
