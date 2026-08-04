@@ -227,7 +227,7 @@ const Page = async () => {
         </div>
       </section>
 
-      <section id="experience" className="mx-auto mt-24 w-full max-w-6xl">
+      <section id="experience" className="mx-auto mt-24 w-full max-w-6xl border-t border-primary-1/50 pt-16">
         <Text as="h2" size="2xl" className="mb-10 text-center">
           Experience
         </Text>
