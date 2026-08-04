@@ -1,0 +1,23 @@
+---
+title: "Improving Flux with Distributed Tracing and Modern Events"
+description: "Advancing Flux with end-to-end OpenTelemetry tracing and modern Kubernetes Events API support."
+tags:
+  - Go
+  - CNCF
+  - Kubernetes
+  - FluxCD
+  - GitOps
+  - OpenTelemetry
+github: "https://github.com/fluxcd/flux2/issues/5761"
+website: "https://fluxcd.io/blog/2025/09/flux-v2.7.0/#opentelemetry-tracing"
+category: "Open-Source"
+order: 3
+---
+
+As an open-source contributor to the Flux project, I proposed and contributed to [RFC-0011](https://github.com/fluxcd/flux2/tree/main/rfcs/0011-opentelemetry-tracing), introducing native OpenTelemetry tracing across Flux’s multi-controller GitOps workflows. The feature correlates source revisions, reconciliations and notifications into end-to-end distributed traces, helping operators understand how a change moves from a Git repository or OCI artifact through Kustomizations, HelmReleases and downstream notifications.
+
+The design preserves Flux’s declarative and stateless architecture by extending its existing Alert and Provider APIs. Users can select the Flux resources they want to observe and export their traces to OpenTelemetry-compatible systems such as Jaeger or Grafana Tempo, without instrumenting individual controllers or deploying dedicated sidecars. [RFC-0011](https://github.com/fluxcd/flux2/tree/main/rfcs/0011-opentelemetry-tracing) has been implemented and made generally available as part of Flux v2.7.0.
+
+Alongside this work, I initiated an ongoing effort to migrate the Flux ecosystem from the legacy Kubernetes core/v1 event model to the modern events.k8s.io/v1 API. The initiative introduces an updated event-recording implementation while preserving compatibility with existing Flux notifications and integrations. It also coordinates changes across the shared Flux runtime and its source, Kustomize, Helm and notification controllers.
+
+Together, these contributions improve Flux’s observability, troubleshooting capabilities and alignment with modern Kubernetes standards, making complex GitOps reconciliation workflows easier to trace, interpret and operate.
