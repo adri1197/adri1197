@@ -187,7 +187,7 @@ const Page = async () => {
             Platform Architect. Open Source Contributor. Cloud-native systems design with a focus on secure, scalable developer platforms. 
           </Text>
           <Text as="p" className="w-full text-base leading-relaxed text-primary-2 sm:text-lg lg:text-xl">
-            Don't believe in AI hype (it's a just powerful tool as any other), compilers were once considered magic too.
+            Don&apos;t believe in AI hype (it&apos;s a just powerful tool as any other), compilers were once considered magic too.
           </Text>
           <div className="mx-auto flex w-full max-w-2xl flex-col gap-4 self-stretch sm:flex-row sm:gap-6 lg:max-w-screen-md lg:gap-8">
             <a
