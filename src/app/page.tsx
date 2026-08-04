@@ -194,7 +194,7 @@ const Page = async () => {
               href="#projects"
               className="flex flex-1 justify-center rounded bg-highlight-1 p-3 transition-colors hover:bg-highlight-2 sm:p-4 lg:p-5"
             >
-              <Text size="md">Projects</Text>
+              <Text size="md">Portfolio</Text>
             </a>
             <a
               href="#experience"
