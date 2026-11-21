@@ -11,7 +11,7 @@ tags:
 github: "https://github.com/fluxcd/flux2/issues/5761"
 website: "https://fluxcd.io/blog/2025/09/flux-v2.7.0/#opentelemetry-tracing"
 category: "Open-Source"
-order: 3
+order: 0
 ---
 
 As an open-source contributor to the Flux project, I proposed and contributed to [RFC-0011](https://github.com/fluxcd/flux2/tree/main/rfcs/0011-opentelemetry-tracing), introducing native OpenTelemetry tracing across Flux’s multi-controller GitOps workflows. The feature correlates source revisions, reconciliations and notifications into end-to-end distributed traces, helping operators understand how a change moves from a Git repository or OCI artifact through Kustomizations, HelmReleases and downstream notifications.
